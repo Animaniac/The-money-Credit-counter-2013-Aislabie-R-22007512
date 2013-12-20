@@ -63,7 +63,6 @@
             this.Totalcreditlbl = new System.Windows.Forms.Label();
             this.Assigncreditlbl = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.TVtxt = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.TwoPoundbtn = new System.Windows.Forms.Button();
             this.Poundbtn = new System.Windows.Forms.Button();
@@ -73,6 +72,7 @@
             this.FivePbtn = new System.Windows.Forms.Button();
             this.Totalvaluepoundlbl = new System.Windows.Forms.Label();
             this.TotalvaluePlbl = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.CoinsEnteredbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Poundlbl)).BeginInit();
@@ -384,6 +384,7 @@
             // 
             // OnePbtn
             // 
+            this.OnePbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.OnePbtn.Image = global::CreditAssignment2013.Properties.Resources._1p;
             this.OnePbtn.Location = new System.Drawing.Point(6, 21);
             this.OnePbtn.Name = "OnePbtn";
@@ -405,6 +406,7 @@
             // 
             // TwoPbtn
             // 
+            this.TwoPbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TwoPbtn.Image = global::CreditAssignment2013.Properties.Resources._2p;
             this.TwoPbtn.Location = new System.Drawing.Point(178, 21);
             this.TwoPbtn.Name = "TwoPbtn";
@@ -477,7 +479,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.TVtxt);
+            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label21);
             this.groupBox2.Controls.Add(this.TwoPoundbtn);
             this.groupBox2.Controls.Add(this.Poundbtn);
@@ -496,14 +498,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Coins";
             // 
-            // TVtxt
-            // 
-            this.TVtxt.Location = new System.Drawing.Point(197, 570);
-            this.TVtxt.Name = "TVtxt";
-            this.TVtxt.Size = new System.Drawing.Size(114, 22);
-            this.TVtxt.TabIndex = 5;
-            this.TVtxt.TextChanged += new System.EventHandler(this.TVtxt_TextChanged);
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -519,6 +513,7 @@
             // TwoPoundbtn
             // 
             this.TwoPoundbtn.BackgroundImage = global::CreditAssignment2013.Properties.Resources._2pounds;
+            this.TwoPoundbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TwoPoundbtn.Location = new System.Drawing.Point(178, 413);
             this.TwoPoundbtn.Name = "TwoPoundbtn";
             this.TwoPoundbtn.Size = new System.Drawing.Size(133, 132);
@@ -529,6 +524,7 @@
             // Poundbtn
             // 
             this.Poundbtn.BackgroundImage = global::CreditAssignment2013.Properties.Resources.pound;
+            this.Poundbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Poundbtn.Location = new System.Drawing.Point(7, 413);
             this.Poundbtn.Name = "Poundbtn";
             this.Poundbtn.Size = new System.Drawing.Size(108, 107);
@@ -539,6 +535,7 @@
             // FiftyPbtn
             // 
             this.FiftyPbtn.BackgroundImage = global::CreditAssignment2013.Properties.Resources._50p;
+            this.FiftyPbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FiftyPbtn.Image = global::CreditAssignment2013.Properties.Resources._50p;
             this.FiftyPbtn.Location = new System.Drawing.Point(178, 275);
             this.FiftyPbtn.Name = "FiftyPbtn";
@@ -550,6 +547,7 @@
             // TwentyPbtn
             // 
             this.TwentyPbtn.BackgroundImage = global::CreditAssignment2013.Properties.Resources._20p;
+            this.TwentyPbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TwentyPbtn.Location = new System.Drawing.Point(6, 275);
             this.TwentyPbtn.Name = "TwentyPbtn";
             this.TwentyPbtn.Size = new System.Drawing.Size(109, 108);
@@ -560,6 +558,7 @@
             // TenPbtn
             // 
             this.TenPbtn.BackgroundImage = global::CreditAssignment2013.Properties.Resources._10p;
+            this.TenPbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TenPbtn.Location = new System.Drawing.Point(178, 152);
             this.TenPbtn.Name = "TenPbtn";
             this.TenPbtn.Size = new System.Drawing.Size(115, 117);
@@ -570,6 +569,7 @@
             // FivePbtn
             // 
             this.FivePbtn.BackgroundImage = global::CreditAssignment2013.Properties.Resources._5p;
+            this.FivePbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FivePbtn.Location = new System.Drawing.Point(6, 152);
             this.FivePbtn.Name = "FivePbtn";
             this.FivePbtn.Size = new System.Drawing.Size(91, 86);
@@ -594,6 +594,16 @@
             this.TotalvaluePlbl.Size = new System.Drawing.Size(103, 17);
             this.TotalvaluePlbl.TabIndex = 2;
             this.TotalvaluePlbl.Text = "Total Value (P)";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(194, 575);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 17);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "label3";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // MoneyCreditCounter
             // 
@@ -675,7 +685,7 @@
         private System.Windows.Forms.Button FivePbtn;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox Credittxt;
-        private System.Windows.Forms.TextBox TVtxt;
+        private System.Windows.Forms.Label label3;
     }
 }
 
