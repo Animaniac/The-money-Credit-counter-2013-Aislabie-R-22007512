@@ -63,6 +63,7 @@
             this.Totalcreditlbl = new System.Windows.Forms.Label();
             this.Assigncreditlbl = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.TVtxt = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.TwoPoundbtn = new System.Windows.Forms.Button();
             this.Poundbtn = new System.Windows.Forms.Button();
@@ -72,7 +73,6 @@
             this.FivePbtn = new System.Windows.Forms.Button();
             this.Totalvaluepoundlbl = new System.Windows.Forms.Label();
             this.TotalvaluePlbl = new System.Windows.Forms.Label();
-            this.TVtxt = new System.Windows.Forms.TextBox();
             this.CoinsEnteredbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Poundlbl)).BeginInit();
@@ -496,6 +496,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Coins";
             // 
+            // TVtxt
+            // 
+            this.TVtxt.Location = new System.Drawing.Point(197, 570);
+            this.TVtxt.Name = "TVtxt";
+            this.TVtxt.Size = new System.Drawing.Size(114, 22);
+            this.TVtxt.TabIndex = 5;
+            this.TVtxt.TextChanged += new System.EventHandler(this.TVtxt_TextChanged);
+            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -587,14 +595,6 @@
             this.TotalvaluePlbl.TabIndex = 2;
             this.TotalvaluePlbl.Text = "Total Value (P)";
             // 
-            // TVtxt
-            // 
-            this.TVtxt.Location = new System.Drawing.Point(197, 570);
-            this.TVtxt.Name = "TVtxt";
-            this.TVtxt.Size = new System.Drawing.Size(114, 22);
-            this.TVtxt.TabIndex = 5;
-            this.TVtxt.TextChanged += new System.EventHandler(this.TVtxt_TextChanged);
-            // 
             // MoneyCreditCounter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -608,7 +608,7 @@
             this.Controls.Add(this.CoinsEnteredbox);
             this.Name = "MoneyCreditCounter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Money Credit Counter v2.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.CoinsEnteredbox.ResumeLayout(false);
             this.CoinsEnteredbox.PerformLayout();
