@@ -16,6 +16,11 @@ namespace CreditAssignment2013
         int onepcount = 0;
         int twopcount = 0;
         int fivepcount = 0;
+        int tenpcount = 0;
+        int twentypcount = 0;
+        int fiftypcount = 0;
+        int poundcount = 0;
+        int twopoundcount = 0;
         public Form1()
         {
             InitializeComponent();
@@ -26,6 +31,11 @@ namespace CreditAssignment2013
             OnePLabel.Text = onepcount.ToString();
             TwoPLabel.Text = twopcount.ToString();
             FivePlbl.Text = fivepcount.ToString();
+            TenPlbl.Text = tenpcount.ToString();
+            TwentyPbtn.Text = twentypcount.ToString();
+            FiftyPbtn.Text = fiftypcount.ToString();
+            Poundbtn.Text = poundcount.ToString();
+            TwoPbtn.Text = twopcount.ToString();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -50,9 +60,15 @@ namespace CreditAssignment2013
             onepcount = 0;
             twopcount = 0;
             fivepcount = 0;
+            tenpcount = 0;
+            twentypcount = 0;
+            fiftypcount = 0;
+            poundcount = 0;
+            twopoundcount = 0;
             OnePLabel.Text = onepcount.ToString();
             TwoPLabel.Text = twopcount.ToString();
             FivePlbl.Text = fivepcount.ToString();
+            TenPlbl.Text = tenpcount.ToString();
         }
 
         private void CoinsEnteredbox_Enter(object sender, EventArgs e)
@@ -62,6 +78,11 @@ namespace CreditAssignment2013
 
         private void TwoPbtn_Click(object sender, EventArgs e)
         {
+            if (Credittxt.Text == string.Empty)
+            {
+                MessageBox.Show("You need to enter the cost of a credit");
+            }
+            else
             twopcount++;
             TwoPLabel.Text = twopcount.ToString();
         }
@@ -70,6 +91,31 @@ namespace CreditAssignment2013
         {
             fivepcount++;
             FivePlbl.Text = fivepcount.ToString();
+        }
+
+        private void Credditcosttxt(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+            
+            label21.Text = OnePLabel.Text;
+
+           
+            
+        }
+
+        private void TenPbtn_Click(object sender, EventArgs e)
+        {
+            tenpcount++;
+            TenPlbl.Text = tenpcount.ToString();
+        }
+
+        private void Credittxt_TextChanged(object sender, EventArgs e)
+        {
+
         }
         
     }
