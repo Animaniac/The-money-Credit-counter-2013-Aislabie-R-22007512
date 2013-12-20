@@ -58,12 +58,12 @@
             this.TwoPbtn = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Credittxt = new System.Windows.Forms.TextBox();
             this.Credittotallabel = new System.Windows.Forms.Label();
             this.Totalcreditlbl = new System.Windows.Forms.Label();
             this.Assigncreditlbl = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.TwoPoundbtn = new System.Windows.Forms.Button();
             this.Poundbtn = new System.Windows.Forms.Button();
             this.FiftyPbtn = new System.Windows.Forms.Button();
@@ -72,7 +72,7 @@
             this.FivePbtn = new System.Windows.Forms.Button();
             this.Totalvaluepoundlbl = new System.Windows.Forms.Label();
             this.TotalvaluePlbl = new System.Windows.Forms.Label();
-            this.Credittxt = new System.Windows.Forms.TextBox();
+            this.ValueP = new System.Windows.Forms.Label();
             this.CoinsEnteredbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Poundlbl)).BeginInit();
@@ -314,6 +314,7 @@
             this.pictureBox7.Size = new System.Drawing.Size(109, 108);
             this.pictureBox7.TabIndex = 12;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // Poundlbl
             // 
@@ -341,6 +342,7 @@
             this.pictureBox5.Size = new System.Drawing.Size(133, 132);
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.FiftyPbtn_Click);
             // 
             // pictureBox2
             // 
@@ -435,6 +437,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Credits";
             // 
+            // Credittxt
+            // 
+            this.Credittxt.Location = new System.Drawing.Point(348, 45);
+            this.Credittxt.Name = "Credittxt";
+            this.Credittxt.Size = new System.Drawing.Size(86, 22);
+            this.Credittxt.TabIndex = 4;
+            this.Credittxt.TextChanged += new System.EventHandler(this.Credittxt_TextChanged);
+            // 
             // Credittotallabel
             // 
             this.Credittotallabel.AutoSize = true;
@@ -467,8 +477,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.ValueP);
             this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.TwoPoundbtn);
             this.groupBox2.Controls.Add(this.Poundbtn);
             this.groupBox2.Controls.Add(this.FiftyPbtn);
@@ -498,17 +508,6 @@
             this.label21.TabIndex = 23;
             this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.White;
-            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label20.Location = new System.Drawing.Point(178, 570);
-            this.label20.MinimumSize = new System.Drawing.Size(114, 22);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(114, 22);
-            this.label20.TabIndex = 22;
-            // 
             // TwoPoundbtn
             // 
             this.TwoPoundbtn.BackgroundImage = global::CreditAssignment2013.Properties.Resources._2pounds;
@@ -517,6 +516,7 @@
             this.TwoPoundbtn.Size = new System.Drawing.Size(133, 132);
             this.TwoPoundbtn.TabIndex = 21;
             this.TwoPoundbtn.UseVisualStyleBackColor = true;
+            this.TwoPoundbtn.Click += new System.EventHandler(this.TwoPoundbtn_Click);
             // 
             // Poundbtn
             // 
@@ -526,15 +526,18 @@
             this.Poundbtn.Size = new System.Drawing.Size(108, 107);
             this.Poundbtn.TabIndex = 20;
             this.Poundbtn.UseVisualStyleBackColor = true;
+            this.Poundbtn.Click += new System.EventHandler(this.Poundbtn_Click);
             // 
             // FiftyPbtn
             // 
             this.FiftyPbtn.BackgroundImage = global::CreditAssignment2013.Properties.Resources._50p;
+            this.FiftyPbtn.Image = global::CreditAssignment2013.Properties.Resources._50p;
             this.FiftyPbtn.Location = new System.Drawing.Point(178, 275);
             this.FiftyPbtn.Name = "FiftyPbtn";
             this.FiftyPbtn.Size = new System.Drawing.Size(133, 132);
             this.FiftyPbtn.TabIndex = 19;
             this.FiftyPbtn.UseVisualStyleBackColor = true;
+            this.FiftyPbtn.Click += new System.EventHandler(this.FiftyPbtn_Click_1);
             // 
             // TwentyPbtn
             // 
@@ -544,6 +547,7 @@
             this.TwentyPbtn.Size = new System.Drawing.Size(109, 108);
             this.TwentyPbtn.TabIndex = 18;
             this.TwentyPbtn.UseVisualStyleBackColor = true;
+            this.TwentyPbtn.Click += new System.EventHandler(this.TwentyPbtn_Click);
             // 
             // TenPbtn
             // 
@@ -583,13 +587,16 @@
             this.TotalvaluePlbl.TabIndex = 2;
             this.TotalvaluePlbl.Text = "Total Value (P)";
             // 
-            // Credittxt
+            // ValueP
             // 
-            this.Credittxt.Location = new System.Drawing.Point(348, 45);
-            this.Credittxt.Name = "Credittxt";
-            this.Credittxt.Size = new System.Drawing.Size(86, 22);
-            this.Credittxt.TabIndex = 4;
-            this.Credittxt.TextChanged += new System.EventHandler(this.Credittxt_TextChanged);
+            this.ValueP.AutoSize = true;
+            this.ValueP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ValueP.Location = new System.Drawing.Point(179, 570);
+            this.ValueP.MinimumSize = new System.Drawing.Size(114, 22);
+            this.ValueP.Name = "ValueP";
+            this.ValueP.Size = new System.Drawing.Size(114, 22);
+            this.ValueP.TabIndex = 24;
+            this.ValueP.Click += new System.EventHandler(this.ValueP_Click);
             // 
             // Form1
             // 
@@ -669,8 +676,8 @@
         private System.Windows.Forms.Button TenPbtn;
         private System.Windows.Forms.Button FivePbtn;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox Credittxt;
+        private System.Windows.Forms.Label ValueP;
     }
 }
 
