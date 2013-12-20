@@ -15,6 +15,7 @@ namespace CreditAssignment2013
     {
         int onepcount = 0;
         int twopcount = 0;
+        int fivepcount = 0;
         public Form1()
         {
             InitializeComponent();
@@ -23,6 +24,8 @@ namespace CreditAssignment2013
         private void Form1_Load(object sender, EventArgs e)
         {
             OnePLabel.Text = onepcount.ToString();
+            TwoPLabel.Text = twopcount.ToString();
+            FivePlbl.Text = fivepcount.ToString();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -46,8 +49,10 @@ namespace CreditAssignment2013
         {
             onepcount = 0;
             twopcount = 0;
+            fivepcount = 0;
             OnePLabel.Text = onepcount.ToString();
             TwoPLabel.Text = twopcount.ToString();
+            FivePlbl.Text = fivepcount.ToString();
         }
 
         private void CoinsEnteredbox_Enter(object sender, EventArgs e)
@@ -59,6 +64,12 @@ namespace CreditAssignment2013
         {
             twopcount++;
             TwoPLabel.Text = twopcount.ToString();
+        }
+
+        private void FivePbtn_Click(object sender, EventArgs e)
+        {
+            fivepcount++;
+            FivePlbl.Text = fivepcount.ToString();
         }
         
     }
