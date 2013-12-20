@@ -235,7 +235,7 @@ namespace CreditAssignment2013
 
         private void TVtxt_TextChanged(object sender, EventArgs e)
         {
-         
+            TVtxt.text = 0.21;
         }
         
     }
